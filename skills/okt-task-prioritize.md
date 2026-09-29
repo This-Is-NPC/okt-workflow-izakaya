@@ -1,0 +1,22 @@
+---
+name: okt-task-prioritize
+description: Rank the work against alternatives with an explicit scoring method and rationale.
+schema_version: 2
+role_affinity:
+  - Owner
+  - Ideator
+command:
+  name: okt-task-prioritize
+  next:
+    - name: okt-task-create
+      context: bare
+---
+Rank the work against alternatives. The ordering must be auditable, not arbitrary.
+
+## Score with an explicit method
+
+Score the candidates with an explicit method — MoSCoW, RICE, or value-vs-effort — and persist the rationale so the ranking can be defended later.
+
+## Fill the bound scaffold
+
+Call `okt template show` for the bound scoring scaffold, fill it, and persist it with `okt comment add` (task-scoped when a task id exists, project-scoped when ranking pre-task candidates). Stay read-only with respect to code and task bodies.

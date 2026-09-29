@@ -46,6 +46,12 @@ Simple records use compact YAML rows; nested rules use indented blocks. Entity
 bodies and the color theme live in sibling directories. Omakiten edits the
 module that owns each changed value and preserves the imports.
 
+Each workflow command is a skill in `skills/<command-name>.md`. Its `command`
+frontmatter names the command, declares optional parameters, and lists immediate
+related commands with `context: full` or `context: bare`. The body is the
+command instruction. `config/bindings.yaml` selects its persona and supporting
+context; `okt command list` and `okt command resolve <name>` read this package.
+
 Editing the active package through Omakiten creates an independent
 `izakaya-local` preset on the first change. Further edits retain that name.
 `okt preset list` reports active and modified snapshots; use a full id when a

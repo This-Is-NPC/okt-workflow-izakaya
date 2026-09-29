@@ -10,14 +10,14 @@ skill_repertoire:
   - static-analysis-discipline
   - test-driven-development
   - markdown
-  - okt-config-playbook
-  - okt-help-playbook
-  - okt-project-continue-playbook
-  - okt-project-resume-playbook
-  - okt-skill-playbook
-  - okt-start-playbook
-  - okt-task-check-playbook
-  - okt-task-quality-playbook
+  - okt-config
+  - okt-help
+  - okt-project-continue
+  - okt-project-resume
+  - okt-skill
+  - okt-start
+  - okt-task-check
+  - okt-task-quality
 laws:
   - project-scope-only
   - no-assumptions

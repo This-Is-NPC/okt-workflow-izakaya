@@ -7,9 +7,9 @@ skill_repertoire:
   - lean-experimentation
   - five-w-two-h
   - markdown
-  - okt-task-imagine-playbook
-  - okt-task-research-playbook
-  - okt-task-validate-playbook
+  - okt-task-imagine
+  - okt-task-research
+  - okt-task-validate
 laws:
   - project-scope-only
 ---
