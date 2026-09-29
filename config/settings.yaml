@@ -1,0 +1,40 @@
+output: {json_minified: true, omit_empty: true}
+workflow: {active: izakaya}
+theme: {active: omakiten}
+template_defaults: [task, pr, comment-resume, comment-selfbranch, comment-documentation]
+views: {from: ./views.yaml}
+agent:
+  recent_comment_limit: 5
+  max_comment_chars: 0
+  include_workflow_in_continue: true
+  next_work_limit: 5
+  similar_task_limit: 5
+tui:
+  token_badge: {yellow_at: 150, red_at: 400}
+sqlite: {busy_timeout_ms: 5000, cache_size_kb: 1024, mmap_size_bytes: 0}
+solutions: {default_top_limit: 10, max_top_limit: 100}
+backup: {retention_count: 5}
+events: {from: ./events.yaml}
+search:
+  stopwords: [and, are, for, from, into, the, this, that, with]
+hooks: {from: ./hooks.yaml}
+tag_synonyms:
+  golang: go
+  javascript: js
+  k8s: kubernetes
+  mongo: mongodb
+  node-js: node
+  nodejs: node
+  postgres: postgresql
+  psql: postgresql
+  py: python
+  tf: terraform
+  typescript: ts
+priorities:
+  - {id: 1, value: low, color: success}
+  - {id: 2, value: normal, default: true, color: info}
+  - {id: 3, value: high, color: error}
+severities:
+  - {id: 1, value: info, color: info}
+  - {id: 2, value: warning, default: true, color: warning}
+  - {id: 3, value: error, color: error}
