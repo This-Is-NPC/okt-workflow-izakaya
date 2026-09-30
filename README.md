@@ -37,7 +37,7 @@ all projects.
 | `events.yaml` | Event definitions and delivery |
 | `hooks.yaml` | Hook bindings |
 | `workflows.yaml` | Buckets, transitions and guards |
-| `surfaces.yaml` | CLI and TUI operation availability |
+| `surfaces.yaml` | CLI, TUI, and HTTP API operation availability |
 | `catalog.yaml` | Active skill and law references |
 | `personas.yaml` | Persona roles and entity bindings |
 | `bindings.yaml` | CLI command bindings |
