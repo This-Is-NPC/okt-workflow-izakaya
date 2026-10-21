@@ -2,7 +2,7 @@
 name: Test evidence
 severity: error
 ---
-Behavioral changes ship with reproducible test evidence: a failing-then-passing test added in the same diff (TDD), or a `#tests-passing` comment with the test command, an output snippet, and a duration. "I tested locally" without an artifact the reviewer can rerun is not evidence.
-
-Bad: opened a PR fixing a race condition with no test; review notes say "trust me, I confirmed it manually."
-Good: PR adds `TestFooRace` (initially red) and the fix that makes it green; `#tests-passing` quotes the `go test -race` output.
+1. Ship every behavioral change with a failing-then-passing test in the same diff, or a `#tests-passing` comment containing the rerunnable command, relevant output, and duration.
+2. Verify a claim about the delivered system on that real artifact under the stated condition, not only through test doubles.
+3. Prove a state change through an independent read path: a new request, connection, or process, never only the write response.
+4. Make a test fail by removing its guard or inverting its condition, then revert that mutation; never weaken an assertion to prove it.
