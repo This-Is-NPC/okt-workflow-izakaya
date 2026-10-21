@@ -18,13 +18,7 @@
           tag: scope
           hint: Declare the task scope first (okt template show comment-scope).
         - {type: wave_gate, hint: '${{intl:guard.wave_gate.hint}}'}
-    - from: 2
-      to: 3
-      guards:
-        - type: comments_tagged
-          count: 1
-          tag: boundary
-          hint: Post the input-domain analysis first (okt template show comment-boundary).
+    - {from: 2, to: 3}
     - {from: 3, to: 2}
     - {from: 2, to: 1}
     - {from: 3, to: 1}
@@ -32,4 +26,3 @@
     start:
       guards:
         - {type: plan_comments_tagged, tag: decomposition, hint: "Post the plan module map first (okt template show comment-decomposition; okt comment add --scope plan --plan <slug> -T decomposition)."}
-        - {type: plan_comments_tagged, tag: council, hint: "Post the council decisions first (okt template show comment-council; okt comment add --scope plan --plan <slug> -T council)."}

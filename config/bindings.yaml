@@ -3,7 +3,6 @@ global:
 okt-audit:
   persona: markl
   laws: [findings-actionable, design-principles, attack-the-premise, test-evidence]
-  templates: [comment-boundary]
   skills: [risk-driven-development, okt-audit]
 okt-config:
   persona: calcifer
@@ -39,7 +38,7 @@ okt-plan-continue:
   skills: [staged-delivery, okt-plan-continue]
 okt-plan-create:
   persona: markl
-  templates: [plan-goal, comment-decomposition, comment-council]
+  templates: [plan-goal, comment-decomposition]
   skills: [staged-delivery, okt-plan-create]
 okt-plan-show:
   persona: markl
@@ -138,7 +137,7 @@ okt-task-resume:
 okt-task-review:
   persona: sophie-hatter
   laws: [no-praise-pad, design-principles]
-  templates: [comment-review-findings, comment-refactor-opportunities, comment-boundary]
+  templates: [comment-review-findings, comment-refactor-opportunities]
   skills: [code-smells, refactoring-catalog, fagan-inspection, okt-task-review]
 okt-task-secure:
   persona: sophie-hatter

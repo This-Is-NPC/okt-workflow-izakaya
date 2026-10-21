@@ -15,5 +15,5 @@ Review the diff. Read-only: post findings; do not edit or commit.
 
 1. **Read every hunk.** Run `git diff <base>..HEAD` (`main` unless named).
 2. **Review in order.** Check correctness, security, smells, refactoring opportunities, and performance; name the method where useful and severity-tag each finding.
-3. **Probe boundaries.** For each external input, derive valid, invalid, and edge classes. Record each as unrepresentable by type, rejected at parsing, or tested in `#boundary` from `comment-boundary`.
+3. **Probe boundaries.** For each external input, derive valid, invalid, and edge classes; check that each is unrepresentable by type, rejected at parsing, or tested.
 4. **Post artifacts.** Fill `comment-review-findings` and, where needed, `comment-refactor-opportunities`; add them as task comments.
