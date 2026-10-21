@@ -9,8 +9,10 @@ command:
   next:
     - name: okt-task-implement
       context: bare
+      when: A target failed
     - name: okt-task-review
       context: bare
+      when: Every target passed
 ---
 Run the project's check targets. This is the mechanical gate — you run the targets and report, you never fix.
 

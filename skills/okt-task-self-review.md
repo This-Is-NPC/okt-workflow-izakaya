@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-review
       context: bare
+      when: Your own findings are fixed or posted
 ---
 Review your OWN diff before handing it to a third party. This is the author's pre-handoff pass — distinct from the third-party `okt-task-review`.
 

@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-implement
       context: bare
+      when: The design decision is recorded
 ---
 Shape the solution before writing it. Design is where the trade-offs are made cheaply, on paper, before code locks them in.
 

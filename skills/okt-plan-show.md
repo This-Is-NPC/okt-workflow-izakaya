@@ -10,8 +10,10 @@ command:
   next:
     - name: okt-plan-continue
       context: bare
+      when: The plan has pending work
     - name: okt-plan-claim
       context: bare
+      when: The active wave has a claimable task
 ---
 Inspect one plan's structure. This is a read-only snapshot — you surface the state, you do not mutate it.
 

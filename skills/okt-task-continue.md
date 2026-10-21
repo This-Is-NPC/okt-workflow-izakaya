@@ -9,6 +9,7 @@ command:
   next:
     - name: okt-task-implement
       context: bare
+      when: The next increment is clear
 ---
 Read a task's checkpoint — understand where the task stopped, do not start coding. This is orientation, not execution.
 

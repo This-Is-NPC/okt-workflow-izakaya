@@ -9,10 +9,13 @@ command:
   next:
     - name: okt-shape
       context: bare
+      when: The board is empty or the user brings a new idea
     - name: okt-run
       context: bare
+      when: A plan has claimable work
     - name: okt-task-continue
       context: bare
+      when: The handoff points at an open task
 ---
 
 ## Read the active picture first

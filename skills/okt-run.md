@@ -9,20 +9,28 @@ command:
   next:
     - name: okt-task-resume
       context: bare
+      when: A claimed task starts without context
     - name: okt-task-continue
       context: bare
+      when: A known task resumes
     - name: okt-task-implement
       context: bare
+      when: The claimed piece is ready to build
     - name: okt-task-self-review
       context: bare
+      when: An increment is complete
     - name: okt-task-refactor
       context: bare
+      when: A behaviour-preserving cleanup is needed
     - name: okt-task-check
       context: bare
+      when: The integration or a Tester run is due
     - name: okt-audit
       context: bare
+      when: Every plan task is done
     - name: okt-pause
       context: bare
+      when: Work must stop
 ---
 Direct a plan — or a single task — to completion by delegation. You are the Owner: you orchestrate, you do not implement. Do not call `okt-start` from here; `okt-run` is already the driver.
 

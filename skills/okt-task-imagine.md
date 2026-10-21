@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-create
       context: bare
+      when: The 5W2H answers are persisted
 ---
 Open discovery — no task exists yet. This is the PLAN phase: you draw the shape of the work out of the user before anything is authored.
 

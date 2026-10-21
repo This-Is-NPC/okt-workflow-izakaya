@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-design
       context: bare
+      when: Sizes are recorded
 ---
 Size each increment. Estimates are relative and explicit, not gut feel left unstated.
 

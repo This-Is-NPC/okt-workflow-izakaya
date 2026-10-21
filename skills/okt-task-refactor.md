@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-check
       context: bare
+      when: The transformation is applied
 ---
 Improve the structure of code without changing its behavior. One behavior-preserving transformation per pass — no feature work rides along.
 

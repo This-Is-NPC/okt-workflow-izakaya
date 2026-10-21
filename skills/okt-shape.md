@@ -10,27 +10,37 @@ command:
   next:
     - name: okt-task-research
       context: bare
+      when: An open question blocks the brief
     - name: okt-task-validate
       context: bare
+      when: The problem itself is unproven
     - name: okt-task-requirements
       context: bare
+      when: Acceptance criteria are missing
     - name: okt-task-prioritize
       context: bare
+      when: Several candidates compete
     - name: okt-task-decompose
       context: bare
+      when: A candidate is too coarse
     - name: okt-task-estimate
       context: bare
+      when: Slices need sizes
     - name: okt-task-create
       context: bare
+      when: A candidate is ready
     - name: okt-plan-create
       context: bare
+      when: Ready tasks need ordering
     - name: okt-run
       context: full
+      when: The plan is assembled
     - name: okt-pause
       context: bare
       when: When work must stop
     - name: okt-task-continue
       context: bare
+      when: The brief maps to an existing task
 ---
 Shape a raw idea — or a loose backlog — into ready-to-build tasks plus an execution plan. You orchestrate the shaping; you do not implement. Read the current picture first with `okt project overview` and `okt list` so you shape against what already exists, not in a vacuum.
 

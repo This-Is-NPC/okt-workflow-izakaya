@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-note-show
       context: bare
+      when: One note must be read in full
 ---
 List knowledge notes for the active scope. Notes live in the `okt comment` surface; this is a read-only listing.
 

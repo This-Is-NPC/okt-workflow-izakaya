@@ -9,6 +9,7 @@ command:
   next:
     - name: okt-task-continue
       context: bare
+      when: The user picked a candidate
 ---
 Scan for the next work to pick up. This is the cold scan across the project, not a warm hand-back of a known thread.
 

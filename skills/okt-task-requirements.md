@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-prioritize
       context: bare
+      when: The baseline is recorded
 ---
 Capture what the solution must satisfy. This is the requirements baseline the rest of the work is measured against.
 

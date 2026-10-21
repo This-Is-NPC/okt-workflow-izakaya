@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-requirements
       context: bare
+      when: The framing survived
 ---
 Pressure-test the problem framing before it hardens into requirements. The framing is a hypothesis; your job is to try to break it before the team builds on it.
 

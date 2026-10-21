@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-create
       context: bare
+      when: The ranking is recorded
 ---
 Rank the work against alternatives. The ordering must be auditable, not arbitrary.
 

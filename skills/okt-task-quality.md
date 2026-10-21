@@ -10,8 +10,10 @@ command:
   next:
     - name: okt-task-refactor
       context: bare
+      when: A finding is structural
     - name: okt-task-implement
       context: bare
+      when: A finding changes behaviour
 ---
 Assess quality through a human lens — the judgment a linter cannot make. This is the qualitative read, distinct from the pass/fail `okt-task-check` mechanical gate.
 

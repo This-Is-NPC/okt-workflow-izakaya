@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-task-estimate
       context: bare
+      when: The breakdown is agreed
 ---
 Break a coarse task into right-sized increments. The aim is slices small enough to ship on their own, not a flat checklist.
 

@@ -10,6 +10,7 @@ command:
   next:
     - name: okt-plan-claim
       context: bare
+      when: The previewed task should be taken
 ---
 Preview a plan before committing to a claim. Nothing is reserved here — this is the look-before-you-leap step.
 

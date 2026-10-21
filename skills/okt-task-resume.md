@@ -9,6 +9,7 @@ command:
   next:
     - name: okt-task-implement
       context: bare
+      when: The next increment is clear
 ---
 Cold-start a task — assume no prior context exists in this session. Unlike a warm checkpoint read, you know nothing and must rebuild the full picture from the artifacts.
 
