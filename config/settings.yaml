@@ -9,6 +9,12 @@ agent:
   include_workflow_in_continue: true
   next_work_limit: 5
   similar_task_limit: 5
+  next_step:
+    task.continue: "Task #{task_id} is in `{bucket}`. Before acting, resolve the command for this step (`okt command list`, then `okt command resolve <name>`); the guards on the outgoing transitions name the evidence still missing. Record progress on this task as you go."
+    project.overview: "Before acting, run `okt command list` and resolve `okt-start` to pick the next command for this board."
+    project.resume: "Pick a task and resolve `okt-task-continue` with its id, or `okt-run` with a plan slug."
+    project.edit: "Project description updated. Ask for the overview, resume the project, or continue a task."
+    event.emit: "Event recorded; the hooks declared on it run now. Read it back with `okt logs list`."
 tui:
   token_badge: {yellow_at: 150, red_at: 400}
 sqlite: {busy_timeout_ms: 5000, cache_size_kb: 1024, mmap_size_bytes: 0}
