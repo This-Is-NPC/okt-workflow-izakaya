@@ -1,7 +1,7 @@
 output: {json_minified: true, omit_empty: true}
 workflow: {active: izakaya}
 theme: {active: omakiten}
-template_defaults: [task, pr, comment-resume, comment-selfbranch, comment-documentation]
+template_defaults: [task, pr, comment-resume, comment-selfbranch, comment-documentation, comment-scope, comment-boundary, comment-decomposition, comment-council]
 views: {from: ./views.yaml}
 agent:
   recent_comment_limit: 5
