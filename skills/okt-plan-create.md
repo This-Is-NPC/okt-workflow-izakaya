@@ -9,13 +9,16 @@ command:
   next:
     - name: okt-plan-show
       context: bare
+      when: Verify the assembled plan
+    - name: okt-run
+      context: bare
+      when: The plan is verified
 ---
-Author a WBS-style plan that groups child tasks into ordered waves. The plan is the execution skeleton; settle its shape and persist the grouping before committing it.
+Create an execution plan whose waves, assignments, and dependencies are persisted.
 
-## Settle the identity and goal
-
-Settle the slug (kebab-case, unique per project), a human-readable name, and a markdown `goal_body` stating the plan's intent and acceptance criteria before committing. Call `okt plan create` with the filled fields.
-
-## Build the wave layout
-
-After the shell exists, call `okt plan wave-add` for each ordered wave and `okt plan assign` for every existing task that belongs in that wave. If the plan encodes task ordering, persist each blocker edge with `okt depend add`. Verify with `okt plan show`; a plan with no waves or no assigned tasks is only a shell, not an assembled plan.
+1. **Set identity and goal.** Use a unique kebab-case slug, a name, and `okt template show plan-goal` for the outcome, scope, quality attributes, verification, and exclusions.
+2. **Create waves and assignments.** Run `okt plan wave-add <slug> "<name>"` in order and `okt plan assign <slug> <wave-id> <task-id>` for every task.
+3. **Record dependencies.** Run `okt depend add <task> --on <blocker>` for every ordering edge; waves do not replace the dependency graph.
+4. **Map modules.** Post `comment-decomposition` on the plan. Each task owns one cohesive module; parallel work has disjoint files, and interfaces land before dependents.
+5. **Record council decisions.** Post `comment-council` on the plan, including a decision and reason for each concern raised.
+6. **Verify.** Run `okt plan show <slug>` and `okt depend list <id>`; no wave is empty and no task is unassigned.

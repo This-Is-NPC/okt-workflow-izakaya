@@ -14,6 +14,7 @@ skill_repertoire:
   - okt-help
   - okt-project-continue
   - okt-project-resume
+  - okt-reflect
   - okt-skill
   - okt-start
   - okt-task-check

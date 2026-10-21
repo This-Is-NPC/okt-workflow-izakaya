@@ -43,6 +43,7 @@ skills:
   - okt-plan-show
   - okt-project-continue
   - okt-project-resume
+  - okt-reflect
   - okt-run
   - okt-shape
   - okt-skill
@@ -93,6 +94,7 @@ skills:
   - user-story-writing
 laws:
   - 5w2h-elicitation
+  - attack-the-premise
   - accept-yellow
   - acceptance-criteria-required
   - audit-trail-integrity
@@ -113,6 +115,7 @@ laws:
   - decision-record-on-gap
   - design-recorded
   - design-recorded-check
+  - design-principles
   - dual-peer-review
   - dual-review-required
   - dual-signal-required

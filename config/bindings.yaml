@@ -2,6 +2,8 @@ global:
   laws: [template-fidelity, authorize-remote-writes, project-scope-only]
 okt-audit:
   persona: markl
+  laws: [findings-actionable, design-principles, attack-the-premise, test-evidence]
+  templates: [comment-boundary]
   skills: [risk-driven-development, okt-audit]
 okt-config:
   persona: calcifer
@@ -37,6 +39,7 @@ okt-plan-continue:
   skills: [staged-delivery, okt-plan-continue]
 okt-plan-create:
   persona: markl
+  templates: [plan-goal, comment-decomposition, comment-council]
   skills: [staged-delivery, okt-plan-create]
 okt-plan-show:
   persona: markl
@@ -47,6 +50,9 @@ okt-project-continue:
 okt-project-resume:
   persona: calcifer
   skills: [pdca-cycle, okt-project-resume]
+okt-reflect:
+  persona: calcifer
+  skills: [okt-reflect]
 okt-run:
   persona: markl
   skills: [staged-delivery, dora-mindset, okt-run]
@@ -74,7 +80,7 @@ okt-task-continue:
 okt-task-create:
   persona: markl
   laws: [invest-stories]
-  templates: [user-story, comment-smart-success, comment-moscow]
+  templates: [user-story, comment-smart-success, comment-moscow, comment-scope]
   skills: [user-story-writing, invest-stories, smart-goals, okt-task-create]
 okt-task-debrief:
   persona: sophie-hatter
@@ -98,7 +104,7 @@ okt-task-imagine:
   skills: [discovery, lean-experimentation, okt-task-imagine]
 okt-task-implement:
   persona: howl-pendragon
-  laws: [walking-skeleton-first, conventional-commits]
+  laws: [walking-skeleton-first, conventional-commits, design-principles, attack-the-premise]
   templates: [pull-request, comment-tests-passing, comment-refactor-drive-by]
   skills:
     - implementation
@@ -131,8 +137,8 @@ okt-task-resume:
   skills: [implementation, okt-task-resume]
 okt-task-review:
   persona: sophie-hatter
-  laws: [no-praise-pad]
-  templates: [comment-review-findings, comment-refactor-opportunities]
+  laws: [no-praise-pad, design-principles]
+  templates: [comment-review-findings, comment-refactor-opportunities, comment-boundary]
   skills: [code-smells, refactoring-catalog, fagan-inspection, okt-task-review]
 okt-task-secure:
   persona: sophie-hatter

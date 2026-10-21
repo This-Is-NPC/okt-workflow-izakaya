@@ -9,17 +9,11 @@ command:
   next:
     - name: okt-task-implement
       context: bare
+      when: Findings need fixes
 ---
-Walk the diff with the loaded lens. This is a read-only review — you surface findings, you never edit files or commit.
+Review the diff. Read-only: post findings; do not edit or commit.
 
-## Read every hunk first
-
-Run `git diff <base>..HEAD` (default base `main`; use staged when explicit) and read every hunk before writing findings.
-
-## Order the pass and cite methodology
-
-Order the pass correctness → security → smells → refactor opportunities → scalability/performance. Cite methodology by name when applicable — `Extract Function — Fowler`, `Feature Envy — Fowler/Beck`, `Sprout Method — Feathers`, `OCP — Martin`. Tag every finding by severity (`error` / `warning` / `info`).
-
-## Post the filled scaffolds
-
-Call `okt template show comment-review-findings` and `okt template show comment-refactor-opportunities` for the scaffolds, then persist each filled task comment with `okt comment add` (`scope=task`, the reviewed `task_id`, `author_type=agent`). Read-only means no file edits and no `git commit`; writing review comments is the durable artifact.
+1. **Read every hunk.** Run `git diff <base>..HEAD` (`main` unless named).
+2. **Review in order.** Check correctness, security, smells, refactoring opportunities, and performance; name the method where useful and severity-tag each finding.
+3. **Probe boundaries.** For each external input, derive valid, invalid, and edge classes. Record each as unrepresentable by type, rejected at parsing, or tested in `#boundary` from `comment-boundary`.
+4. **Post artifacts.** Fill `comment-review-findings` and, where needed, `comment-refactor-opportunities`; add them as task comments.

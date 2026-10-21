@@ -7,21 +7,15 @@ role_affinity:
   - Owner
 command:
   name: okt-task-create
+  next:
+    - name: okt-task-implement
+      context: bare
+      when: The task is in development
 ---
-Author the task — this is the PLAN → DO handoff. This command is creation-only: it authors and fills the task and calls `okt task create`. It does NOT implement the requested change — building the work belongs to `okt-task-implement`, after the task exists and moves to dev.
+Author a task; creation only.
 
-## Apply the feasibility gate first
-
-Apply the feasibility gate before anything else: an infeasible request stops here with the report, and no task is created. Only feasible work proceeds to authoring.
-
-## Author with the user-story scaffold
-
-Call `okt template show user-story` to fetch the scaffold and fill it per template-fidelity — an INVEST-checked story. Then call `okt task create` with the filled description.
-
-## Surface ambiguity verbatim
-
-The `okt task create` response carries `confirmation` and `similar_tasks` when ambiguity exists. Surface them to the user verbatim and let them choose — do not silently pick.
-
-## Handoff
-
-Next: suggest the user create the branch, add a `#self-branch` comment via `okt comment add` (template_slug=`comment-selfbranch`), and move the task to dev.
+1. **Check feasibility.** Stop and report an infeasible request; do not create a task.
+2. **Fill the story.** Use `okt template show user-story` (or `task-bugfix`), with INVEST checks and a SMART success definition.
+3. **Create it.** Run `okt task create -t "<title>" --file -` with the filled body.
+4. **Resolve duplicates.** Show returned `similar_tasks` and wait for confirmation before using `--confirm`.
+5. **Prepare development.** Post `#scope` from `okt template show comment-scope`, then `#self-branch`, before moving to development.
